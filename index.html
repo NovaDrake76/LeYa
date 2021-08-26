@@ -21,35 +21,38 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-<div class="top" >
+    <div class="d-flex"></div>
+    <div class="top">
       <div class="container">
-        <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center">      
+        <div
+          class="
+            d-flex
+            flex-column flex-sm-row
+            justify-content-around
+            align-items-center
+          "
+        >
           <div class="flex-column">
-            <div class="line mb-5">
-              THE ACCELERATION OF THE NEW ERA
-            </div>
-            
-            <div class="line">
-              STILL OUTPACES THE CYCLE OF LIFE AND DEATH
-            </div>
-            
-            <div class="line">
-              MIRACLES EVERYWHERE
-            </div>
-            
-            <div class="line">
-              REINCARNATION EVERYDAY
-            </div>
-            <h1 class="d-flex mt-5"><p class="text-danger">God</p> 's in His heaven – All 's right with the world</h1>
-  
+            <div class="line mb-5">THE ACCELERATION OF THE NEW ERA</div>
+
+            <div class="line">STILL OUTPACES THE CYCLE OF LIFE AND DEATH</div>
+
+            <div class="line">MIRACLES EVERYWHERE</div>
+
+            <div class="line">REINCARNATION EVERYDAY</div>
+            <h1 class="d-flex mt-5">
+              <p class="text-danger">God</p>
+              's in His heaven – All 's right with the world
+            </h1>
           </div>
-            <img src="https://preview.redd.it/mwiwmcbt4ao21.png?width=960&crop=smart&auto=webp&s=d531dc9a80387110e42e25741a7a8b320637ec46"  class="img-fluid w-50" >
-  
-          </div>
+          <img
+            src="https://preview.redd.it/mwiwmcbt4ao21.png?width=960&crop=smart&auto=webp&s=d531dc9a80387110e42e25741a7a8b320637ec46"
+            class="img-fluid w-50"
+          />
+        </div>
       </div>
     </div>
     <section>
@@ -68,9 +71,17 @@
       <div class="bg"></div>
       <h1 class="text-light">Nice, right?</h1>
     </section>
+    <section>
+      <div class="eyes">
+        <div class="eye">
+          <div class="ball"></div>
+        </div>
 
-
-    </div>
+        <div class="eye">
+          <div class="ball"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
@@ -79,9 +90,22 @@
 
     <!-- MDB -->
     <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
     ></script>
 
+    <script>
+      var balls = document.getElementsByClassName("ball");
+      document.onmousemove = function () {
+        var x = (event.clientX * 100) / window.innerWidth + "%";
+        var y = (event.clientY * 100) / window.innerHeight + "%";
+
+        for (var i = 0; i < 2; i++) {
+          balls[i].style.left = x;
+          balls[i].style.top = y;
+          balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
+        }
+      };
+    </script>
   </body>
 </html>

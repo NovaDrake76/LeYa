@@ -28,3 +28,33 @@ section {
 .top {
   height: 100vh;
 }
+
+.eyes {
+  position: relative;
+  align-self: flex-start;
+  width: 100%;
+  text-align: center;
+  background-color: #fea271;
+}
+.eye {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  display: inline-block;
+  margin: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #310510;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: #310510;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
